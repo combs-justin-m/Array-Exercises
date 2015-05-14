@@ -29,15 +29,21 @@ function maxOfThree(num1, num2, num3){
 // ---------------------
 
 function isVowel(char){
-    //...
+    if (char === 'a' || char === 'e' || char === 'i' || char === 'o' || char === 'u') {
+        return true;
+    } else {
+        return false;
+    }
 }
 
 // ---------------------
 // Write a function translate() that will translate a text into "rÃ¶varsprÃ¥ket". That is, double every consonant and place an occurrence of "o" in between. For example, translate("this is fun") should return the string "tothohisos isos fofunon".
 // ---------------------
 
-function rovarspraket(phrase){
-    //...
+function translate(phrase){
+    for (var i = 0; i < phrase.length; i++) {
+        console.log(i);
+    }
 }
 
 // ---------------------

@@ -29,11 +29,7 @@ function maxOfThree(num1, num2, num3){
 // ---------------------
 
 function isVowel(char){
-    if (char === 'a' || char === 'e' || char === 'i' || char === 'o' || char === 'u') {
-        return true;
-    } else {
-        return false;
-    }
+    return "aeiou".indexOf(char) >= 0 ;
 }
 
 // ---------------------
@@ -41,10 +37,25 @@ function isVowel(char){
 // ---------------------
 
 function translate(phrase){
+    var result = '';
     for (var i = 0; i < phrase.length; i++) {
-        console.log(i);
+        var c = phrase[i];
+        if (!isVowel(c)) {
+            result += c + 'o' + c;
+        } else {
+            result += c;
+        }
     }
+    return result;
 }
+
+
+// function translate2(phrase) {
+//     return phrase.replace(/[^aeiou]/g, function (char) {
+//         return char + 'o' + char;
+//     });
+// }
+
 
 // ---------------------
 // Define a function sum() and a function multiply() that sums and multiplies (respectively) all the numbers in an array of numbers. For example, sum([1,2,3,4]) should return 10, and multiply([1,2,3,4]) should return 24.

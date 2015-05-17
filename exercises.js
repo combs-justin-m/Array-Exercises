@@ -113,7 +113,9 @@ function findLongestWord(words) {
 // ---------------------
 
 function filterLongWords(words, i){
-
+    return words.filter(function (w){
+        return w.length > i;
+    });
 }
 
 // ---------------------
@@ -121,5 +123,5 @@ function filterLongWords(words, i){
 // ---------------------
 
 function charFreq(string){
-    //...
+
 }

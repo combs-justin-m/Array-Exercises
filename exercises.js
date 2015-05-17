@@ -122,6 +122,25 @@ function filterLongWords(words, i){
 // Write a function charFreq() that takes a string and builds a frequency listing of the characters contained in it. Represent the frequency listing as a Javascript object. Try it with something like charFreq("abbabcbdbabdbdbabababcbcbab").
 // ---------------------
 
-function charFreq(string){
+function charFreq(string) {
+    var result = {};
+    string.split('').forEach(function (c){
+        if (result[c]) {
+            result[c]++;
+        } else {
+            result[c] = 1;
+        }
+    });
+    return result;
+}
 
+function charFreq2(string){
+    return string.split('').reduce(function(a, b){
+        if (a[b]) {
+            a[b]++;
+        } else {
+            a[b] = 1;
+        }
+        return a;
+    }, {});
 }
